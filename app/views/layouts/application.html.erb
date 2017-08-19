@@ -18,6 +18,9 @@
         <%= link_to 'Sign Up', signup_path %>
       <% end %>
     </nav>
+    <% if flash[:notice] %>
+      <div class='flash notice'><%= flash[:notice] %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
