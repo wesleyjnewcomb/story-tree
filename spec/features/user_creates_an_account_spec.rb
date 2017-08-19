@@ -13,7 +13,6 @@ feature 'user creates an account' do
     expect(page).to have_content('Account creation successful!')
     expect(page).to have_content('Logged in as Test Testerson')
     expect(page).to have_content('Logout')
-    puts 'in here'
   end
 
   scenario 'inputting passwords that do not match' do
