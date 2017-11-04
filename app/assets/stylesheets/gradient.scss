@@ -1,0 +1,7 @@
+@mixin gradient-background($top-color, $bottom-color) {
+    background: $top-color; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($top-color, $bottom-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($top-color, $bottom-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($top-color, $bottom-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($top-color, $bottom-color); /* Standard syntax */
+}

@@ -1,0 +1,30 @@
+@import 'colors';
+@import 'gradient';
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  color: $dark-gray;
+}
+
+input {
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 48rem;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  @include gradient-background(#fdfdfd, $white);
+
+  &:hover {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    @include gradient-background(#fafafa, $white);
+  }
+  &:focus {
+    border: 1px solid #bbb;
+    border-radius: 2px;
+    @include gradient-background(#f6f6f6, $white);
+  }
+}

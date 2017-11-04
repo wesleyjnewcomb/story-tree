@@ -1,0 +1,32 @@
+@import 'colors';
+@import 'gradient';
+
+$button-color: $primary-color;
+$button-border: 1px solid scale-color($button-color, $lightness: -20%);
+
+@mixin button {
+  height: auto;
+  width: auto;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  border: $button-border;
+  border-radius: 2px;
+  cursor: pointer;
+  color: $white;
+  background: $button-color;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+  &:hover {
+    border: $button-border;
+    background: scale-color($button-color, $lightness: -20%);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+button {
+  @include button;
+}
+
+input[type=submit] {
+  @include button;
+}
